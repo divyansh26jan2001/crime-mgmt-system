@@ -1,0 +1,21 @@
+{% extends 'admin_dashboard.html' %} 
+
+{% block main %} 
+<br>
+
+    <div class = "container-fluid">
+        <form method="post" action="/add_police_station/">{% csrf_token %}
+            <legend>Police Station Add form</legend>
+            <div class="mb-3">
+              <label for="police_station_name" class="form-label">Police Station name</label>
+              <input type="text" class="form-control" id="police_station_name" name="police_station_name" aria-describedby="textHelp" value="{{name}}">
+            </div>
+            <div class="mb-3">
+              <label for="police_station_code" class="form-label">Police Station code</label>
+              <input type="text" class="form-control" id="police_station_code" name="police_station_code" value="{{code}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+    
+{% endblock %}

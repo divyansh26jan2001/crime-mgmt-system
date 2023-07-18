@@ -1,0 +1,37 @@
+{% extends 'user_base_dashboard.html' %} 
+
+{% block main %}
+<br><br>
+<div class="container">
+    <table class="table table-bordered border-success">
+        <h1>FIR Details</h1>
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">FIR No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Email</th>
+                <th scope="col">FIR Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in info %}
+            <tr>
+                <th scope="row">{{forloop.counter}}.</th>
+                <td>{{i.FIR_no}}</td>
+                <td>{{i.applicant_name}}</td>
+                <td>{{i.number}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.fir_date}}</td>
+                <td>{{i.final_status}}</td>
+                <td><a href="/fir_details/"><i class="material-icons">edit</i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

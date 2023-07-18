@@ -1,0 +1,30 @@
+{% extends 'admin_dashboard.html' %} 
+
+{% block main %} 
+<br><br>
+<div class="container">
+    <table class="table table-bordered border-success">
+        <h1>Manage Category</h1>
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Category Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in info %}
+            <tr>
+                <th scope="row">{{forloop.counter}}.</th>
+                <td>{{i.category_name}}</td>
+                <td>{{i.creation_date}}</td>
+                <td><a href="/add_police_station/{{i}}"><i class="material-icons">edit</i></a>
+                    <i class="material-icons">delete</i>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

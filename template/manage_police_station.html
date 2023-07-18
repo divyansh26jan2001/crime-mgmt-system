@@ -1,0 +1,32 @@
+{% extends 'admin_base_dashboard.html' %}
+
+{% block main %}
+<br><br>
+<div class="container">
+    <table class="table table-bordered border-success">
+        <h1>Manage Police Station</h1>
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Police Station Name</th>
+                <th scope="col">Police Station Code</th>
+                <th scope="col">Creation Date</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in info %}
+            <tr>
+                <th scope="row">{{forloop.counter}}.</th>
+                <td>{{i.police_station_name}}</td>
+                <td>{{i.police_station_code}}</td>
+                <td>{{i.creation_date}}</td>
+                <td><a href="/add_police_station/{{i}}"><i class="material-icons">edit</i></a>
+                    <i class="material-icons">delete</i>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

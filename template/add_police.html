@@ -1,0 +1,46 @@
+{% extends 'admin_dashboard.html' %} 
+
+{% block main %} 
+<br>
+
+    <div class = "container-fluid">
+        <form method="post" action="/add_police/">{% csrf_token %}
+            <legend>Add Police Details Form</legend>
+            <div class="mb-3">
+              <label for="police_station_name" class="form-label">Police Station name</label>
+              <select class="form-select form-control" aria-label="Default select example" name="police_station_name" id="police_station_name">
+                <option selected>Choose police Station</option>
+                {% for i in content %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="police_id" class="form-label">Police ID</label>
+              <input type="text" class="form-control" id="police_id" name="police_id">
+            </div>
+            <div class="mb-3">
+              <label for="police_name" class="form-label">Police Name</label>
+              <input type="name" class="form-control" id="police_name" name="police_name">
+            </div>
+            <div class="mb-3">
+              <label for="police_email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="police_email" name="police_email">
+            </div>
+            <div class="mb-3">
+              <label for="police_mobile" class="form-label">Mobile Number</label>
+              <input type="number" class="form-control" id="police_mobile" name="police_mobile">
+            </div>
+            <div class="mb-3">
+              <label for="police_address" class="form-label">Address</label>
+              <input type="textarea" class="form-control" id="police_address" name="police_address">
+            </div>
+            <div class="mb-3">
+              <label for="police_password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="police_password" name="police_password">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+    
+{% endblock %}

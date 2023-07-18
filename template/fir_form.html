@@ -1,0 +1,61 @@
+{% extends 'user_base_dashboard.html' %} 
+
+{% block main %} 
+
+<br>
+
+    <div class = "container-fluid">
+        <form method="post" action="/fir_form/">{% csrf_token %}
+            <legend>FIR Form</legend>
+            <div class="mb-3">
+              <label for="police_station_name" class="form-label">Police Station name</label>
+              <select class="form-select form-control" aria-label="Default select example" name="police_station_name" id="police_station_name">
+                <option selected>Choose police Station</option>
+                {% for i in st %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="crime_type" class="form-label">Crime type</label>
+                <select class="form-select form-control" aria-label="Default select example" name="crime_type" id="crime_type">
+                  <option selected>Choose crime type</option>
+                  {% for i in ct %}
+                  <option value="{{i}}">{{i}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            <div class="mb-3">
+              <label for="accussed_name" class="form-label">Accussed Name</label>
+              <input type="text" class="form-control" id="accussed_name" name="accussed_name">
+            </div>
+            <div class="mb-3">
+              <label for="applicant_name" class="form-label">Applicant Name</label>
+              <input type="text" class="form-control" id="applicant_name" name="applicant_name">
+            </div>
+            <div class="mb-3">
+              <label for="parentage" class="form-label">Parentage</label>
+              <input type="text" class="form-control" id="parentage" name="parentage">
+            </div>
+            <div class="mb-3">
+              <label for="applicant_mobile" class="form-label">Mobile Number</label>
+              <input type="number" class="form-control" id="applicant_mobile" name="applicant_mobile">
+            </div>
+            <div class="mb-3">
+              <label for="applicant_address" class="form-label">Address</label>
+              <input type="textarea" class="form-control" id="applicant_address" name="applicant_address">
+            </div>
+            <div class="mb-3">
+              <label for="relation" class="form-label">Relation with accussed person</label>
+              <input type="text" class="form-control" id="relation" name="relation">
+            </div>
+            <div class="mb-3">
+                <label for="purpose" class="form-label">Purpose of applying FIR</label>
+                <input type="textarea" class="form-control" id="purpose" name="purpose">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+
+{% endblock %} 

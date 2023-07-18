@@ -1,0 +1,34 @@
+{% extends 'police_base_dashboard.html' %} 
+
+{% block main %} 
+<br><br>
+<div class="container">
+    <table class="table table-bordered border-success">
+        <h1>User chargesheet</h1>
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">FIR No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">FIR Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1.</th>
+                <td>{{info.FIR_no}}</td>
+                <td>{{info.name}}</td>
+                <td>{{info.number}}</td>
+                <td>{{info.email}}</td>
+                <td>{{info.fir_date}}</td>
+                <td>{{info.final_status}}</td>
+                <td><a href="/police_chargesheet/"><i class="material-icons">watch</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

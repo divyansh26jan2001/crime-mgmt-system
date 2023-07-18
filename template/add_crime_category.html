@@ -1,0 +1,20 @@
+{% extends 'admin_dashboard.html' %} 
+
+{% block main %} 
+<br>
+
+    <div class = "container-fluid">
+        <form method="post" action="/add_crime_category/">{% csrf_token %}
+            <legend>Crime Category Add form</legend>
+            <div class="mb-3">
+              <label for="crime_category_name" class="form-label">Category name</label>
+              <input type="text" class="form-control" id="crime_category_name" name="crime_category_name" aria-describedby="textHelp">
+            </div>
+            <div class="mb-3">
+              <label for="crime_category_desc" class="form-label">Category Description</label>
+              <input type="textarea" class="form-control" id="crime_category_desc" name="crime_category_desc">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'police_base_dashboard.html' %}
+
+{% block main %}
+<br>
+
+<div class="container-fluid">
+    <form method="post" action="#">{% csrf_token %}
+        <legend>Police Station Add form</legend>
+        <strong><hr>Criminal details<hr></strong>
+        <div class="mb-3">
+            <label for="police_station_name" class="form-label">Police Station name</label>
+            <select class="form-select form-control" aria-label="Default select example" id="police_station_name" id="police_station_name">
+                <option selected>Choose Police Station</option>
+                {% for i in st %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="crime_type" class="form-label">Crime type</label>
+            <select class="form-select form-control" aria-label="Default select example" id="crime_type" id="crime_type">
+                <option selected>Choose Crime type</option>
+                {% for i in ty %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="crime_date" class="form-label">Crime Date</label>
+            <input type="date" class="form-control" id="crime_date" name="crime_date">
+        </div>
+        <div class="mb-3">
+            <label for="crime_time" class="form-label">Crime Date</label>
+            <input type="time" class="form-control" id="crime_time" name="crime_time">
+        </div>
+        <div class="mb-3">
+            <label for="prison" class="form-label">Select Prison</label>
+            <select class="form-select form-control" aria-label="Default select example" name="prison" id="prison">
+                <option selected>Select Prison</option>
+                {% for i in st %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+                
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="court" class="form-label">Select court</label>
+            <select class="form-select form-control" aria-label="Default select example" name="court" id="court">
+                <option selected>Choose Court</option>
+                {% for i in st %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <strong><hr>Criminal details<hr></strong>
+        <div class="mb-3">
+            <label for="criminal_name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="criminal_name" name="criminal_name">
+        </div>
+        <div class="mb-3">
+            <label for="criminal_number" class="form-label">Mobile number</label>
+            <input type="number" class="form-control" id="criminal_number" name="criminal_number">
+        </div>
+        <div class="mb-3">
+            <label for="criminal_height" class="form-label">Height</label>
+            <input type="number" class="form-control" id="criminal_height" name="criminal_height">
+        </div>
+        <div class="mb-3">
+            <label for="criminal_weight" class="form-label">Weight</label>
+            <input type="number" class="form-control" id="criminal_weight" name="criminal_weight">
+        </div>
+        <div class="mb-3">
+            <label for="criminal_dob" class="form-label">DOB</label>
+            <input type="date" class="form-control" id="criminal_dob" name="criminal_dob">
+        </div>
+        <div class="mb-3">
+            <label for="criminal_email" class="form-label">email</label>
+            <input type="email" class="form-control" id="criminal_email" name="criminal_email">
+        </div>
+        <div class="mb-3">
+            <label for="criminal_address" class="form-label">Address</label>
+            <input type="textarea" class="form-control" id="criminal_address" name="criminal_address">
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" name="city">
+        </div><div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" name="state">
+        </div><div class="mb-3">
+            <label for="country" class="form-label">country</label>
+            <input type="text" class="form-control" id="country" name="country">
+        </div>
+        <div class="mb-3">
+            <label for="pincode" class="form-label">Pincode</label>
+            <input type="number" class="form-control" id="pincode" name="pincode">
+        </div>
+        <div class="mb-3">
+            <label for="photo" class="form-label">Choose photo</label>
+            <input type="file" class="form-control" id="photo" name="photo">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% endblock %}

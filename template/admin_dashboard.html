@@ -1,0 +1,96 @@
+{% extends 'admin_base_dashboard.html' %}
+
+{% block main %} 
+<!-- Main content -->
+<div class="main-content">
+
+    <div class="row">
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header">
+                    <div class="icon icon-warning">
+                        <span class="material-icons">equalizer</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="category"><strong>Visits</strong></p>
+                    <h3 class="card-title">53</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons text-info">info</i>
+                        <a href="#pablo">See detailed report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header">
+                    <div class="icon icon-rose">
+                        <span class="material-icons">book</span>
+
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="category"><strong>FIRs</strong></p>
+                    <h3 class="card-title">15</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i> Category wise FIRs
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header">
+                    <div class="icon icon-success">
+                        <span class="material-icons">
+                            Police
+                        </span>
+
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="category"><strong>Police</strong></p>
+                    <h3 class="card-title">20</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">date_range</i> Number of police
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header">
+                    <div class="icon icon-success">
+                        <span class="material-icons">
+                            category
+                        </span>
+
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="category"><strong>Crime category</strong></p>
+                    <h3 class="card-title">3</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">category</i> All types
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

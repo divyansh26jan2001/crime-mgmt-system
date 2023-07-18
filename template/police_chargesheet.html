@@ -1,0 +1,192 @@
+{% extends 'police_base_dashboard.html' %} 
+
+{% block main %} 
+<div class = 'container container-fluid text-center my-3'>
+    <div class="row">
+        <div class="col"><span><h1><u>FIR No : {{info.FIR_no}}</u></h1></span></div>
+    </div>
+
+    <div class="row text-left">
+        <div class="col"><h3>Complainer Details</h3></div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="name"><b>Name</b></span>
+                <input type="text" aria-label="name" class="form-control" id = "name" name ="name" value="a" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="mobile"><b>mobile</b></span>
+                <input type="number" aria-label="mobile" class="form-control" id = "mobile" name ="mobile" value="123" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="email"><b>email</b></span>
+                <input type="email" aria-label="First name" class="form-control" id = "email" name ="email" value="c" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-left my-2">
+        <div class="col"><h3>FIR Details</h3></div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="police_station"><b>police station</b></span>
+                <input type="text" aria-label="police_station" class="form-control" id = "police_station" name ="police_station" value="{{info.police_station}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="crime_type"><b>crime type</b></span>
+                <input type="text" aria-label="crime_type" class="form-control" id = "crime_type" name ="crime_type" value="{{info.crime_type}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="accussed_name"><b>Accussed name</b></span>
+                <input type="email" aria-label="accussed name" class="form-control" id = "accussed_name" name ="accussed_name" value="{{info.accused_name}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="applicant_name"><b>Name of Applicant</b></span>
+                <input type="text" aria-label="applicant name" class="form-control" id = "applicant_name" name ="applicant_name" value="{{info.applicant_name}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="parentage_application"><b>Parentage of application</b></span>
+                <input type="text" aria-label="parentage application" class="form-control" id = "parentage_application" name ="parentage_application" value="{{info.parentage}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="contact_number"><b>Contact number</b></span>
+                <input type="number" aria-label="contact number" class="form-control" id = "contact_number" name ="contact_number" value="{{info.number}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="address"><b>Address</b></span>
+                <input type="text" aria-label="address" class="form-control" id = "address" name ="address" value="{{info.address}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="purpose"><b>Purpose of FIR</b></span>
+                <input type="text" aria-label="purpose" class="form-control" id = "purpose" name ="purpose" value="{{info.purpose}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="applicant_name"><b>Name of Applicant</b></span>
+                <input type="text" aria-label="applicant name" class="form-control" id = "applicant_name" name ="applicant_name" value="{{info.applicant_name}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="relation"><b>Relation with accussed</b></span>
+                <input type="text" aria-label="relation" class="form-control" id = "relation" name ="relation" value="{{info.relation_with_accussed}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="date_of_fir"><b>Date of FIR</b></span>
+                <input type="date" aria-label="date of fir" class="form-control" id = "date_of_fir" name ="date_of_fir" value="{{info.fir_date}}" readonly>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="final_status"><b>Order final status</b></span>
+                <input type="text" aria-label="final status" class="form-control" id = "final_status" name ="final_status" value="{{info.final_status}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="police_remark"><b>Police remark</b></span>
+                <input type="text" aria-label="police remark" class="form-control" id = "police_remark" name ="police_remark" value="{{info.police_remark}}" readonly>
+            </div>
+        </div>
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="rem_date"><b>Police rem date</b></span>
+                <input type="date" aria-label="rem_date" class="form-control" id = "rem_date" name ="rem_date" value="{{info.police_date}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col"><h3>Fill chargesheet details(Only for officers)</h3></div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="section"><b>Section of Law</b></span>
+                <input type="text" aria-label="section" class="form-control" id = "section" name ="section" value="{{info.section_of_law}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="investigation_officer"><b>Investigation officer</b></span>
+                <input type="text" aria-label="investigation officer" class="form-control" id = "investigation_officer" name ="investigation_officer" value="{{info.investigation_officer_name}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="investigation_detail"><b>Investigation details</b></span>
+                <input type="textarea" aria-label="investigation detail" class="form-control" id = "investigation_detail" name ="investigation_detail" value="{{investigation_details}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="remark"><b>Remark</b></span>
+                <input type="text" aria-label="remark" class="form-control" id = "remark" name ="remark" value="{{info.police_remark}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col">
+            <div class = "input-group">
+                <span class="input-group-text" for="status"><b>Status</b></span>
+                <input type="text" aria-label="status" class="form-control" id = "status" name ="status" value="{{info.final_status}}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col text-center">
+            <button type="submit" class="btn-primary py-2 px-2">Update</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
